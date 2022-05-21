@@ -1,0 +1,12 @@
+.container{
+    max-width: 1500px;
+    width: 100vw;
+    height: 150vh;
+    background-color: #ffc107bc;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+}

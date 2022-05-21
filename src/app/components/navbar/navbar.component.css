@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.navbar{
+    background-color: #ffc107bb;
+    font-family: "Raleway";
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+}
+
+.btn-outline-primary {
+    color: #000000;
+    border-color: #000000;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffc107;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem #f8f9fa;
+}

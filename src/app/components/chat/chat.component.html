@@ -1,0 +1,29 @@
+<div class="chatIconContainer" *ngIf="usuarioLogeado && !mostrarChat" (click)="mostrarChat=true" >
+   open <img class="chatIcon" src="../../../assets/chat.png" alt="chat icon">
+</div>
+
+<div class="card text-center cardContainer" *ngIf="usuarioLogeado && mostrarChat">
+    <div class="card-header">
+     CHAT
+     <div class="closeIcon" (click)="mostrarChat=false">x</div>
+    </div>
+    <div class="card-body">
+        <div id="contenedorDeMensajes" class="contenedorDeMensajes h-100">
+            <p *ngFor="let mensaje of mensajes" class="msj p-2"
+            [ngClass]="(usuarioLogeado.uid==mensaje.emisor)? 'enviado' : 'recibido'" >
+                {{mensaje.texto}}
+            </p>
+        </div>
+    </div>
+
+    <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
+            <input type="text" class="form-control" placeholder="Message" 
+            [(ngModel)]="nuevoMensaje" [ngModelOptions]="{standalone: true}">
+            <div class="input-group-append" (click)="enviarMensaje()">
+              <span class="input-group-text" id="basic-addon2">
+                  <img class="imgEnviar" src="../../../assets/enviar.png" width="20px" height="23px"  alt="send">
+              </span>
+            </div>
+    </form>
+</div>
+ 

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light ">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/chat.png" width="60" height="60" class="d-inline-block align-top" alt="">
+      <h2>TellMe</h2>
+    </a>
+
+    <div ngbDropdown class="d-inline-block" *ngIf="userLogged|async as user; else btnIngresar">
+      <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="50" height="50" class="d-inline-block align-top" alt="">
+        {{user.displayName?user.displayName : user.email}}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="logout()">Logout</button>
+      </div>
+    </div>
+
+
+      <ng-template #btnIngresar>
+        <button class="btn btn-outline-primary m-2" routerLink="/login">Sign In</button>
+      </ng-template>
+
+  </nav>

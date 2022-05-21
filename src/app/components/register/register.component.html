@@ -1,0 +1,30 @@
+<div class="scene">
+  
+    <div class="container">
+      
+      <div class=" text-center">
+        <div class="card-header">
+          <h3>REGISTER</h3>
+        </div>
+        <div class="card-body p-4">
+          <input class="form-control m-2" type="email" placeholder="email"  [(ngModel)]="usuario.email">
+          <input class="form-control m-2" type="password" placeholder="password" [(ngModel)]="usuario.password">
+          <button class="btn btn-primary btn-block m-2" (click)="Registrarse()">Sign Up</button>
+    
+          <label>Do you have an account?<a routerLink="/login"> Sign In</a> </label>
+        </div>
+           
+    
+      </div>
+    </div>
+    
+    <div class="iconoflotante">
+      <div class="icono"></div>
+      <div class="icono"></div>
+      <div class="icono"></div>
+      <div class="icono"></div>
+      <div class="icono"></div>
+    
+    </div>
+      
+</div>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+.cardContainer{
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    font-family: 'Raleway';
+    overflow:auto;
+}
+
+.card-header{
+    background-color: #ffc107bb;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.card-body{
+    padding: 00.5rem;
+    background-image: url(../../../assets/Heaven.png);
+    background-size: cover;
+    
+}
+
+.imgEnviar:active{
+    transform: scale(0.9);
+}
+
+.enviado{
+    display: block;
+    float: right;
+    background-color: rgb(255, 203, 32);
+    color: rgba(0, 0, 0, 0.925);
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    font-weight:lighter;
+}
+
+.recibido{
+    display: block;
+    float: left;
+    background-color: rgb(235, 200, 131);
+    color: rgba(0, 0, 0, 0.925);
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+    font-weight:lighter;
+}
+
+.contenedorDeMensajes{
+    padding: 0.3rem;
+}
+
+.contenedorDeMensajes::-webkit-scrollbar{
+    display: none;
+}
+
+.chatIconContainer{
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;  
+    background-color: #ffffff;  
+    border-radius: 100%;
+    
+}
+
+.chatIcon{
+    width: 40px;
+    height: 40px;
+}
+
+.closeIcon{
+    position: absolute;
+    right: 0.5rem;
+    top: 0rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:450px) and (min-height: 730px) {
+    .cardContainer{
+        width: 350px;
+        height: 600px;
+    }
+}
+    
